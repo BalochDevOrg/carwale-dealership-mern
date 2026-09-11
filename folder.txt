@@ -1,0 +1,93 @@
+CARWALE/
+├── client/ # React frontend application
+│ ├── public/ # Static assets ( logo images, etc.)
+│ ├── src/
+│ │ ├── admin / #all admin and other files
+│ │ │   ├── AdminDashboard.jsx
+│ │ │   ├── AdminMenu.jsx
+│ │ │   ├── AdminOrders.jsx
+│ │ │   ├── BrandForm.jsx
+│ │ │   ├── BrandList.jsx
+│ │ │   ├── Cars.jsx
+│ │ │   ├── CreateBrands.jsx
+│ │ │   ├── CreateCar.jsx
+│ │ │   ├── loading.css
+│ │ │   ├── Loading.jsx
+│ │ │   ├── Spinner.jsx
+│ │ │   └── UpdateCar.jsx
+│ │ ├── common /   #user profile dashboard orders profile
+│ │ │   ├── UserDashboard.jsx
+│ │ │   ├── UserMenu.jsx
+│ │ │   ├── UserOrder.jsx
+│ │ │   └── UserProfile.jsx
+│ │ ├── context
+│ │ │   ├── auth.js
+│ │ │   └── cart.js
+│ │ ├── Home  / #all home sections
+│ │ │   ├── About.jsx
+│ │ │   ├── Brands.jsx
+│ │ │   ├── BrandsHome.jsx
+│ │ │   ├── CarsFilterpage.jsx
+│ │ │   ├── CarsHome.jsx
+│ │ │   ├── Faq.jsx
+│ │ │   ├── Features.jsx
+│ │ │   ├── Footer.jsx
+│ │ │   ├── Hero.jsx
+│ │ │   ├── HomeMain.jsx
+│ │ │   └── Navbar.jsx
+│ │ ├── images / #all images
+│ │ ├── pages / 
+│ │ │   ├── CarInBrand.jsx
+│ │ │   ├── Cart.jsx
+│ │ │   ├── CarView.jsx
+│ │ │   ├── Login.jsx
+│ │ │   ├── NotFound.jsx
+│ │ │   ├── Price.js
+│ │ │   └── Register.jsx
+│ │ ├── Routes / 
+│ │ │   ├── AdminRoutes.jsx
+│ │ │   └── PrivateRoute.jsx
+│ │ ├── styles # all css for home and others
+│ │ │   ├── about.css
+│ │ │   ├── auth.css
+│ │ │   ├── brands.css
+│ │ │   ├── cart.css
+│ │ │   ├── carview.css
+│ │ │   ├── faq.css
+│ │ │   ├── features.css
+│ │ │   ├── footer.css
+│ │ │   ├── hero.css
+│ │ │   └── navbar.css
+│ │ ├── App.js # Main application component
+│ │ └── App.css # Global styles
+│ ├── package.json
+│ ├── package-lock.json
+│ └── .env # Frontend environment variables
+├── server/  
+│ ├── auth/ #auth
+│ │ ├── auth.js #auth
+│ ├── controllers/  
+│ │ ├── brandController.js
+│ │ ├── carController.js
+│ │ └── userController.js  
+│ ├── database #database
+│ │ └── database.js  
+│ ├── middleware/
+│ │ └── authMiddleware.js # middleware
+│ ├── models #models
+│ │ ├── carBrand.js
+│ │ ├── carModel.js
+│ │ ├── orderModel.js
+│ │ └── userModel.js  
+│ ├── routes/  
+│ │ ├── brandRoutes.js
+│ │ ├── carRoutes.js
+│ │ └── userRoutes.js  
+│ ├── uploads
+│ │ └── multer.text #nothing here till now  
+│ ├── server.js # Main server entry point
+│ ├── package.json
+│ └── .env # Backend environment variables (account, Cloudinary keys, mongo creds)
+├── .gitignore
+├── README.md
+└── package.json (root)
