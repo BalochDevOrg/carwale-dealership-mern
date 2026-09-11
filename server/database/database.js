@@ -1,24 +1,17 @@
-// const mongoose = require('mongoose')
-
-// const connection = async () => {
-//     try{
-//         await mongoose.connect(process.env.MONGO)
-//         console.log('Car Connected to MongoDB');
-//     }catch(err){
-//         console.log('Connection Failed',err);
-//     }
-// }
-
-// module.exports = connection
-
 const mongoose = require("mongoose");
 
 const connection = async () => {
+  const mongoUri = process.env.MONGO_URI || process.env.MONGO;
+
+  if (!mongoUri) {
+    console.error(
+      "Connection Failed: MONGO_URI or MONGO is not set in server/.env"
+    );
+    return;
+  }
+
   try {
-    const hardcodedMongoURI =
-      "mongodb+srv://adeelmirwani222:Adeel222@foodapp.ezapb.mongodb.net/?retryWrites=true&w=majority&appName=Foodapp"; // REPLACE YOUR_ACTUAL_PASSWORD
-    console.log("Attempting to connect with hardcoded URI:", hardcodedMongoURI); // For debugging
-    await mongoose.connect(hardcodedMongoURI);
+    await mongoose.connect(mongoUri);
     console.log("Car Connected to MongoDB");
   } catch (err) {
     console.log("Connection Failed", err);

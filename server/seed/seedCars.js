@@ -1,12 +1,19 @@
 const mongoose = require("mongoose");
 const { default: slugify } = require("slugify");
+require("dotenv").config({ path: require("path").join(__dirname, "../.env") });
 const { ensureLocalCarImages } = require("./downloadCarImages");
 
 const brandModel = require("../models/carBrand");
 const carModel = require("../models/carModel");
 
-const MONGO_URI =
-  "mongodb+srv://adeelmirwani222:Adeel222@foodapp.ezapb.mongodb.net/?retryWrites=true&w=majority&appName=Foodapp";
+const MONGO_URI = process.env.MONGO_URI || process.env.MONGO;
+
+if (!MONGO_URI) {
+  console.error(
+    "Set MONGO_URI or MONGO in server/.env before running the seed script."
+  );
+  process.exit(1);
+}
 
 let imageSets = {
   suv: [],
